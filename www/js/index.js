@@ -64,7 +64,7 @@ function cameraButton(){
     alert('Camera button has been pressed!!!');
     navigator.camera.getPicture(onSuccess, onFail, {
         quality: 50,
-        destinationType: Camera.DestinationType.DATA_URL;
+        destinationType: Camera.DestinationType.DATA_URL
     });
 
     function onSuccess(imageData){
