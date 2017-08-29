@@ -178,6 +178,13 @@ module.exports = [
             "cordova"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "id": "cordova-plugin-device.device",
+        "clobbers": [
+            "device"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -186,7 +193,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.2",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-camera": "2.4.1",
-    "cordova-plugin-file": "4.3.3"
+    "cordova-plugin-file": "4.3.3",
+    "cordova-plugin-device": "1.1.6"
 };
 // BOTTOM OF METADATA
 });

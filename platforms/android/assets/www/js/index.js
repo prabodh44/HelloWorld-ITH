@@ -53,19 +53,122 @@ var app = {
 
 app.initialize();
 
+document.getElementById("createFile").addEventListener('click', createFile);
+document.getElementById("writeFile").addEventListener('click', writeFile);
+document.getElementById("readFile").addEventListener('click', readFile);
+document.getElementById("removeFile").addEventListener('click', removeFile);
 document.getElementById("cameraButton").addEventListener('click', cameraButton);
-function cameraButton() {
-    navigator.camera.getPicture(onSucess, onFail, {
+
+
+function cameraButton(){
+    alert('Camera button has been pressed!!!');
+    navigator.camera.getPicture(onSuccess, onFail, {
         quality: 50,
         destinationType: Camera.DestinationType.DATA_URL
     });
 
-    function onSucess(imageData){
+    function onSuccess(imageData){
         var image = document.getElementById('myImage');
         image.src = "data:image/jpeg;base64," + imageData;
     }
 
     function onFail(message){
-        alert("Failed due to: " + message); 
+        alert('Failed because: ' + message);
     }
+}
+
+function createFile() {
+    var type = window.TEMPORARY;
+    var size = 5 * 1024 * 1024; //size of the required storage in bytes
+    window.requestFileSystem (type, size, successCallback, errorCallback);
+
+    function successCallback(fs) {
+        fs.root.getFile('log1.txt', {
+            create: true,
+            exclusive: true
+        }, function(fileEntry){
+            alert('File creation successful!!');
+        }, errorCallback);
+    }
+
+    function errorCallback(error){
+        alert("createFile ERROR: " + error);
+    }
+}
+
+
+
+function writeFile() {
+    var type = window.TEMPORARY;
+    var size = 5 *1024 * 1024;
+    window.requestFileSystem(type, size, successCallback, errorCallback);
+
+    function successCallback(fs) {
+        alert('File system name ' + fs.name);
+        fs.root.getFile('log1.txt', {create:true}, function(fileEntry){
+            fileEntry.createWriter(function(fileWriter){
+                fileWriter.onwriteend = function(e){
+                    alert('Write successful');
+                };
+
+                fileWriter.onerror = function(e){
+                    alert('Write failed ' + e.toString());
+                };
+
+                var blob = new Blob(['Lorem Ipsum'], {type: 'plain/text'});
+                fileWriter.write(blob);
+            }, errorCallback);
+        }, errorCallback);
+    }
+
+    function errorCallback(error){
+        alert('writeFile Error ' + error);
+    }
+}
+
+
+function readFile() {
+    var type = window.TEMPORARY;
+    var size = 5 * 1024 * 1024;
+    window.requestFileSystem(type, size, successCallback, errorCallback)
+ 
+    function successCallback(fs) {
+       fs.root.getFile('log1.txt', {}, function(fileEntry) {
+ 
+          fileEntry.file(function(file) {
+             var reader = new FileReader();
+ 
+             reader.onloadend = function(e) {
+                var txtArea = document.getElementById('textarea');
+                txtArea.value = this.result;
+             };
+             reader.readAsText(file);
+          }, errorCallback);
+       }, errorCallback);
+    }
+ 
+    function errorCallback(error) {
+       alert("readFile ERROR: " + error)
+    }
+
+ }
+
+
+ function removeFile() {
+    var type = window.TEMPORARY;
+    var size = 5 * 1024 * 1024;
+
+    window.requestFileSystem(type, size, successCallback, errorCallback);
+
+    function successCallback(fs){
+        fs.root.getFile('log1.txt', {create:false}, function(fileEntry){
+            fileEntry.remove(function(){
+                alert('File has been removed!');
+            }, errorCallback);
+        }, errorCallback);
+    }
+
+    function errorCallback(error) {
+        alert("readFile ERROR: " + error)
+     }
 }

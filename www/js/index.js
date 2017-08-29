@@ -58,7 +58,24 @@ document.getElementById("writeFile").addEventListener('click', writeFile);
 document.getElementById("readFile").addEventListener('click', readFile);
 document.getElementById("removeFile").addEventListener('click', removeFile);
 document.getElementById("cameraButton").addEventListener('click', cameraButton);
+document.getElementById("deviceInfo").addEventListener('click', deviceInfo);
 
+function deviceInfo() {
+    alert(
+        'Cordova Version: ' + device.cordova + '\n' +
+        'Device Model : ' + device.model + '\n' + 
+        'Device UUID: ' + device.uuid + '\n' +
+        'Device Version: ' + device.version + '\n'
+    );
+
+    var info = 'Cordova Version: ' + device.cordova + '\n' +
+    'Device Model : ' + device.model + '\n' + 
+    'Device UUID: ' + device.uuid + '\n' +
+    'Device Version: ' + device.version + '\n';
+
+    var textarea = document.getElementById('textarea');
+    textarea.value = info;
+}
 
 function cameraButton(){
     alert('Camera button has been pressed!!!');
