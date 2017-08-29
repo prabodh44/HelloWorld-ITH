@@ -57,6 +57,25 @@ document.getElementById("createFile").addEventListener('click', createFile);
 document.getElementById("writeFile").addEventListener('click', writeFile);
 document.getElementById("readFile").addEventListener('click', readFile);
 document.getElementById("removeFile").addEventListener('click', removeFile);
+document.getElementById("cameraButton").addEventListener('click', cameraButton);
+
+
+function cameraButton(){
+    alert('Camera button has been pressed!!!');
+    navigator.camera.getPicture(onSuccess, onFail, {
+        quality: 50,
+        destinationType: Camera.DestinationType.DATA_URL;
+    });
+
+    function onSuccess(imageData){
+        var image = document.getElementById('myImage');
+        image.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    function onFail(message){
+        alert('Failed because: ' + message);
+    }
+}
 
 function createFile() {
     var type = window.TEMPORARY;
@@ -133,7 +152,8 @@ function readFile() {
     }
 
  }
- 
+
+
  function removeFile() {
     var type = window.TEMPORARY;
     var size = 5 * 1024 * 1024;
