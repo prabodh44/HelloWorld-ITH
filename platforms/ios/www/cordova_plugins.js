@@ -212,6 +212,15 @@ module.exports = [
         "clobbers": [
             "device"
         ]
+    },
+    {
+        "file": "plugins/my-cordova-plugin/www/plugin.js",
+        "id": "my-cordova-plugin.plugin",
+        "pluginId": "my-cordova-plugin",
+        "clobbers": [
+            "MyCordovaPlugin"
+        ],
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -221,7 +230,8 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-camera": "2.4.1",
     "cordova-plugin-file": "4.3.3",
-    "cordova-plugin-device": "1.1.6"
+    "cordova-plugin-device": "1.1.6",
+    "my-cordova-plugin": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

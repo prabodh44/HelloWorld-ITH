@@ -38,5 +38,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "my-cordova-plugin": {
+        "source": {
+            "type": "local",
+            "path": "/Users/ith/Desktop/Projects/CordovaProjects/cordova-plugin-template"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

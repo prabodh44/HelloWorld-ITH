@@ -1,0 +1,1 @@
+../../../../../../cordova-plugin-template/src/android/com/example/MyCordovaPlugin.java

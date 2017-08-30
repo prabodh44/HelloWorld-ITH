@@ -27,6 +27,10 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"MyCordovaPlugin\"><param name=\"android-package\" value=\"com.example.MyCordovaPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -63,6 +67,9 @@
             "PACKAGE_NAME": "com.example.hello"
         },
         "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "my-cordova-plugin": {
             "PACKAGE_NAME": "com.example.hello"
         }
     },
@@ -253,6 +260,14 @@
             "clobbers": [
                 "device"
             ]
+        },
+        {
+            "file": "plugins/my-cordova-plugin/www/plugin.js",
+            "id": "my-cordova-plugin.plugin",
+            "clobbers": [
+                "MyCordovaPlugin"
+            ],
+            "runs": true
         }
     ],
     "plugin_metadata": {
@@ -260,6 +275,7 @@
         "cordova-plugin-compat": "1.1.0",
         "cordova-plugin-camera": "2.4.1",
         "cordova-plugin-file": "4.3.3",
-        "cordova-plugin-device": "1.1.6"
+        "cordova-plugin-device": "1.1.6",
+        "my-cordova-plugin": "1.0.0"
     }
 }

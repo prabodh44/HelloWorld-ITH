@@ -25,6 +25,9 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
+    <feature name="MyCordovaPlugin">
+        <param name="ios-package" onload="true" value="MyCordovaPlugin" />
+    </feature>
     <name>HelloWorld</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

@@ -16,6 +16,10 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
+    <feature name="MyCordovaPlugin">
+        <param name="android-package" value="com.example.MyCordovaPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <allow-intent href="market:*" />
     <name>HelloWorld</name>
     <description>

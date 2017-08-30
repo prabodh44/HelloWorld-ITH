@@ -59,6 +59,15 @@ document.getElementById("readFile").addEventListener('click', readFile);
 document.getElementById("removeFile").addEventListener('click', removeFile);
 document.getElementById("cameraButton").addEventListener('click', cameraButton);
 document.getElementById("deviceInfo").addEventListener('click', deviceInfo);
+document.getElementById("passArray").addEventListener('click', passArray);
+
+function passArray() {
+    var array = [1,2,8,5];
+
+    window.MyCordovaPlugin.sortArray(array, function(sortedArray){
+        alert(sortedArray);
+    })
+}
 
 function deviceInfo() {
     alert(
