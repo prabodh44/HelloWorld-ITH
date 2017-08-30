@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6BF7F198233DD3B3EBD4D03EE19E4D44B9D0A530",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6BF7F198233DD3B3EBD4D03EE19E4D44B9D0A530" : 9223372036854775807,
+    "069A51DCF8F7923A0B992EAFB066123154223DA7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5F9DAB36-6EAE-40DA-9FBF-758FD6194980",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6BF7F198233DD3B3EBD4D03EE19E4D44B9D0A530" : "hello\/",
+    "069A51DCF8F7923A0B992EAFB066123154223DA7" : "cordova-plugin-template\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HelloWorld",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "platforms\/ios\/HelloWorld.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ionic-team\/cordova-plugin-template.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "069A51DCF8F7923A0B992EAFB066123154223DA7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/prabodh44\/HelloWorld-ITH.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6BF7F198233DD3B3EBD4D03EE19E4D44B9D0A530"
+    }
+  ]
+}

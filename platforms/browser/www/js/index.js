@@ -60,12 +60,19 @@ document.getElementById("removeFile").addEventListener('click', removeFile);
 document.getElementById("cameraButton").addEventListener('click', cameraButton);
 document.getElementById("deviceInfo").addEventListener('click', deviceInfo);
 document.getElementById("passArray").addEventListener('click', passArray);
+document.getElementById("showDate").addEventListener('click', showDate);
 
+function showDate(){
+    window.MyCordovaPlugin.getDate(function(myDate){
+        alert('The date is ' + myDate);
+    })
+}
 function passArray() {
-    var array = [1,2,5,8];
-    alert('hey');
-    alert(array);
-    alert('yay');
+    var array = [1,2,8,5];
+
+    window.MyCordovaPlugin.sortArray(array, function(sortedArray){
+        alert(sortedArray);
+    })
 }
 
 function deviceInfo() {

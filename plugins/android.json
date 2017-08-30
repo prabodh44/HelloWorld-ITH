@@ -21,6 +21,9 @@
         },
         "my-cordova-plugin": {
             "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.example.hello"
         }
     },
     "dependent_plugins": {

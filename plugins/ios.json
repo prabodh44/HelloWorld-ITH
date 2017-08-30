@@ -23,6 +23,10 @@
         },
         "my-cordova-plugin": {
             "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-contacts": {
+            "CONTACTS_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.example.hello"
         }
     },
     "dependent_plugins": {
